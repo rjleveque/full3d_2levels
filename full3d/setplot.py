@@ -12,7 +12,7 @@ from pylab import linspace
 
 from clawpack.clawutil.data import ClawData
 
-# Use 1 for xy, 2 for xz
+# Use 1 for xy, 2 for xz, 3 for yz
 slice_type = 3
 
 
