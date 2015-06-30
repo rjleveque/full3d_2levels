@@ -422,10 +422,10 @@ def setrun(claw_pkg='amrclaw'):
     amrdata.amr_levels_max = 2
     
     # List of refinement ratios at each level (length at least amr_level_max-1)
-    amrdata.refinement_ratios_x = [8]
-    amrdata.refinement_ratios_y = [8]
-    amrdata.refinement_ratios_z = [8]
-    amrdata.refinement_ratios_t = [8]
+    amrdata.refinement_ratios_x = [4]
+    amrdata.refinement_ratios_y = [4]
+    amrdata.refinement_ratios_z = [4]
+    amrdata.refinement_ratios_t = [4]
 
     # Specify type of each aux variable in amrdata.auxtype.
     # This must be a list of length num_aux, each element of which is one
