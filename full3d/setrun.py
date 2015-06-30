@@ -411,7 +411,7 @@ def setrun(claw_pkg='amrclaw'):
 
     rundata.slicedata.slices_xy = [0.0]
     rundata.slicedata.slices_xz = [0.0]    
-    rundata.slicedata.slices_yz = [0.02]    
+    rundata.slicedata.slices_yz = [0.19]    
         
     # ---------------
     # AMR parameters:

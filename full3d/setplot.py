@@ -13,7 +13,7 @@ from pylab import linspace
 from clawpack.clawutil.data import ClawData
 
 # Use 1 for xy, 2 for xz
-slice_type = 2
+slice_type = 3
 
 
 #--------------------------
@@ -36,6 +36,8 @@ def setplot(plotdata):
         prefix = "slice_xy1"
     elif (slice_type == 2):
         prefix = "slice_xz1"
+    elif (slice_type == 3):
+        prefix = "slice_yz1"
 
     os.chdir(plotdata.outdir)
     for filename in os.listdir("."):
@@ -50,18 +52,28 @@ def setplot(plotdata):
         
     #Plot outline of interface
     def interface(current_data):
-        from pylab import linspace,plot
+        from pylab import linspace,plot,xlabel,ylabel
         from numpy import cos,sin,ones
 
         if (slice_type == 1):
 	     y = linspace(griddata.lower[1],griddata.upper[1],1000)
         elif (slice_type == 2):
 	     y = linspace(griddata.lower[2],griddata.upper[2],1000)
-             
-        x1 = probdata.pipe_inner_radius*ones((1000,1))
-        x2 = probdata.pipe_outer_radius*ones((1000,1))
-        plot(x1,y,'g',linewidth=2.0)
-        plot(x2,y,'g',linewidth=2.0)
+        if slice_type in [1,2]:
+            x1 = probdata.pipe_inner_radius*ones((1000,1))
+            x2 = probdata.pipe_outer_radius*ones((1000,1))
+            plot(x1,y,'g',linewidth=2.0)
+            plot(x2,y,'g',linewidth=2.0)
+
+        if (slice_type == 1):
+            xlabel('x')
+            ylabel('y')
+        elif (slice_type == 2):
+            xlabel('x')
+            ylabel('z')
+        elif (slice_type == 3):
+            xlabel('y')
+            ylabel('z')
           
     # Outputs the trace of the stress tensor
     def sigmatr(current_data):
