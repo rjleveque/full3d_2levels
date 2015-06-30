@@ -261,7 +261,7 @@ def setrun(claw_pkg='amrclaw'):
     clawdata.dt_max = 1.000000e+99
     
     # Desired Courant number if variable dt used 
-    clawdata.cfl_desired = 0.900000
+    clawdata.cfl_desired = 0.500000
     # max Courant number to allow without retaking step with a smaller dt:
     clawdata.cfl_max = 1.000000
     
@@ -274,7 +274,7 @@ def setrun(claw_pkg='amrclaw'):
     # ------------------
 
     # Order of accuracy:  1 => Godunov,  2 => Lax-Wendroff plus limiters
-    clawdata.order = 2
+    clawdata.order = 1
     
     # Use dimensional splitting? 
     clawdata.dimensional_split = False
@@ -283,7 +283,7 @@ def setrun(claw_pkg='amrclaw'):
     #  0 or 'none'      ==> donor cell (only normal solver used)
     #  1 or 'increment' ==> corner transport of waves
     #  2 or 'all'       ==> corner transport of 2nd order corrections too
-    clawdata.transverse_waves = 22
+    clawdata.transverse_waves = 0
     
     
     # Number of waves in the Riemann solution:
