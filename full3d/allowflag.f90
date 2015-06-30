@@ -30,7 +30,8 @@
 
       call mapc2p(x,y,z,xp,yp,zp)
 
-      if ((dsqrt(yp*yp + zp*zp) .le. trans_halfwidth) .or. (t.le.50.d0)) then
+      !if ((dsqrt(yp*yp + zp*zp) .le. trans_halfwidth) .or. (t.le.50.d0)) then
+      if ((dsqrt(yp*yp + zp*zp) .le. 0.015d0) .or. (t.le.48.5d0)) then
             allowflag = .true.
       else
             allowflag = .false.

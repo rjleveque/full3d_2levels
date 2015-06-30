@@ -86,8 +86,8 @@ def setplot(plotdata):
     plotitem.show = True 
     plotitem.plot_var = sigmatr
     plotitem.pcolor_cmap = colormaps.blue_white_red
-    plotitem.pcolor_cmin = -3e-6
-    plotitem.pcolor_cmax = 3e-6
+    plotitem.pcolor_cmin = -9e-6
+    plotitem.pcolor_cmax = 9e-6
     plotitem.add_colorbar = True
     #plotitem.amr_patchedges_show = [1]
     #plotitem.amr_celledges_show = [0]
@@ -96,7 +96,7 @@ def setplot(plotdata):
         plotitem.mapc2p = mapc2p
     # Figure for stress trace - pcolor
     plotfigure = plotdata.new_plotfigure(name='Minus stress trace (scale)', figno=2)
-    #plotfigure.show = False
+    plotfigure.show = False
 
     # Set up for axes in this figure:
     plotaxes = plotfigure.new_plotaxes()
@@ -123,7 +123,7 @@ def setplot(plotdata):
 
     ## Figure for grid cells
     plotfigure = plotdata.new_plotfigure(name='cells', figno=3)
-    plotfigure.show = True
+    #plotfigure.show = False
 
     # Set up for axes in this figure:
     plotaxes = plotfigure.new_plotaxes()

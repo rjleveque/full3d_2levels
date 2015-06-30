@@ -212,8 +212,8 @@ def setrun(claw_pkg='amrclaw'):
     if clawdata.output_style==1:
         # Output ntimes frames at equally spaced times up to tfinal:
         # Can specify num_output_times = 0 for no output
-        clawdata.num_output_times = 50 #80
-        clawdata.tfinal = 65.0 #6e-5 #0.0001800000 #0.00003
+        clawdata.num_output_times = 20 #80
+        clawdata.tfinal = 52.0 #6e-5 #0.0001800000 #0.00003
         clawdata.output_t0 = True  # output at initial (or restart) time?
         
     elif clawdata.output_style == 2:
@@ -411,6 +411,7 @@ def setrun(claw_pkg='amrclaw'):
 
     rundata.slicedata.slices_xy = [0.0]
     rundata.slicedata.slices_xz = [0.0]    
+    rundata.slicedata.slices_yz = [0.02]    
         
     # ---------------
     # AMR parameters:
@@ -421,10 +422,10 @@ def setrun(claw_pkg='amrclaw'):
     amrdata.amr_levels_max = 2
     
     # List of refinement ratios at each level (length at least amr_level_max-1)
-    amrdata.refinement_ratios_x = [16]
-    amrdata.refinement_ratios_y = [16]
-    amrdata.refinement_ratios_z = [16]
-    amrdata.refinement_ratios_t = [16]
+    amrdata.refinement_ratios_x = [8]
+    amrdata.refinement_ratios_y = [8]
+    amrdata.refinement_ratios_z = [8]
+    amrdata.refinement_ratios_t = [8]
 
     # Specify type of each aux variable in amrdata.auxtype.
     # This must be a list of length num_aux, each element of which is one
