@@ -76,6 +76,10 @@ def setrun(claw_pkg='amrclaw'):
     probdata.add_param('rho2',       7850.0,  'density') #kg/m^3 ==> Speeds in m/us
     probdata.add_param('lambda2',    1.145405275e-1,  'Lame parameter lambda')
     probdata.add_param('mu2',        8.215201625e-2,  'Lame parameter mu')
+    # replace pipe by water:
+    #probdata.add_param('rho2',       1000.0,  'density') #kg/m^3 ==> Speeds in m/s
+    #probdata.add_param('lambda2',    2.202256e-3,  'Lame parameter lambda')
+    #probdata.add_param('mu2',        0.0,  'Lame parameter mu')
     # Water outside pipe
     probdata.add_param('rho3',       1000.0,  'density') #kg/m^3 ==> Speeds in m/s
     probdata.add_param('lambda3',    2.202256e-3,  'Lame parameter lambda')
@@ -261,7 +265,7 @@ def setrun(claw_pkg='amrclaw'):
     clawdata.dt_max = 1.000000e+99
     
     # Desired Courant number if variable dt used 
-    clawdata.cfl_desired = 0.500000
+    clawdata.cfl_desired = 0.400000
     # max Courant number to allow without retaking step with a smaller dt:
     clawdata.cfl_max = 1.000000
     
