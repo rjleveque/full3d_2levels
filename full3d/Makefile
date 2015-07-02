@@ -54,7 +54,7 @@ SOURCES = \
   ./interp_reload.f90 \
   ./mapc2p.f90 \
   ./init_alloc.f90 \
-  ../rp/rpn3_vc_elasticity_cylindrical.f90 \
+  ../rp/rpn3_vc_test.f90 \
   ../rp/rpt3_vc_elasticity_cylindrical.f90 \
   ../rp/rptt3_vc_elasticity_cylindrical.f90 \
   $(AMRLIB)/amr3.f90 \

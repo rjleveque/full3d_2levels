@@ -228,7 +228,7 @@ def setrun(claw_pkg='amrclaw'):
     elif clawdata.output_style == 3:
         # Output every step_interval timesteps over total_steps timesteps:
         clawdata.output_step_interval = 1
-        clawdata.total_steps = 7
+        clawdata.total_steps = 5
         clawdata.output_t0 = True  # output at initial (or restart) time?
         
 
@@ -415,7 +415,7 @@ def setrun(claw_pkg='amrclaw'):
 
     rundata.slicedata.slices_xy = [0.0]
     rundata.slicedata.slices_xz = [0.0]    
-    rundata.slicedata.slices_yz = [0.19]    
+    rundata.slicedata.slices_yz = [0.191]    
         
     # ---------------
     # AMR parameters:
